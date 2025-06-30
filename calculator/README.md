@@ -11,7 +11,7 @@ Supports full arithmetic expressions using a calculator-style UI with buttons.
 - Built without JavaScript — pure Flask
 
 ## 📷 Demo Screenshot
-![Calculator Screenshot](MyCalculator.jpeg)
+![Calculator Screenshot](images/MyCalculator.jpg)
 ## 🚀 Technologies Used
 - Python 3
 - Flask
