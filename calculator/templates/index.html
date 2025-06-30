@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      background: #202020;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: #2d2d2d;
+      border-radius: 20px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .display {
+      width: 100%;
+      padding: 15px;
+      font-size: 28px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: right;
+      background: #ffffff;
+      color: #000000;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button.operator {
+      background-color: #f57c00;
+    }
+
+    button.equal {
+      background-color: #2196f3;
+      grid-column: span 2;
+    }
+
+    button.clear {
+      background-color: #e53935;
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <form method="POST">
+      <input class="display" type="text" name="expression" value="{{ expression }}" readonly>
+      
+      <div class="buttons">
+        <button type="submit" name="btn" value="7">7</button>
+        <button type="submit" name="btn" value="8">8</button>
+        <button type="submit" name="btn" value="9">9</button>
+        <button type="submit" name="btn" value="/">÷</button>
+
+        <button type="submit" name="btn" value="4">4</button>
+        <button type="submit" name="btn" value="5">5</button>
+        <button type="submit" name="btn" value="6">6</button>
+        <button type="submit" name="btn" value="*">×</button>
+
+        <button type="submit" name="btn" value="1">1</button>
+        <button type="submit" name="btn" value="2">2</button>
+        <button type="submit" name="btn" value="3">3</button>
+        <button type="submit" name="btn" value="-">−</button>
+
+        <button type="submit" name="btn" value="0">0</button>
+        <button type="submit" name="btn" value=".">.</button>
+        <button class="equal" type="submit" name="btn" value="=">=</button>
+        <button type="submit" name="btn" value="+">+</button>
+
+        <button class="clear" type="submit" name="btn" value="C">C</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
